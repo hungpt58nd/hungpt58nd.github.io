@@ -118,8 +118,9 @@ $('#yes').click(function() {
         cancelButtonColor: '#f6cd61',
         confirmButtonText: 'Gửi cho tớ <3'
     }).then((result) => {
-        console.log(result)
         if (result.value) {
+            window.open('https://www.youtube.com/watch?v=08Pljeg_E2Y&start_radio=1&list=RD08Pljeg_E2Y', '_blank')
+
             Swal.fire({
                 width: 900,
                 confirmButtonText: 'Okiiiii lun <3',
