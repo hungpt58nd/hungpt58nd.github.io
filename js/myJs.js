@@ -11,7 +11,7 @@ $(document).ready(function() {
 })
 
 function firstQuestion(){
-    
+
     $('.content').hide();
     Swal.fire({
         title: 'He luu cậu!',
@@ -22,6 +22,8 @@ function firstQuestion(){
         background: '#fff url("img/iput-bg.jpg")',
         imageAlt: 'Custom image',
       }).then(function(){
+        var audio = new Audio('sound/tick.mp3');
+        audio.play();
         $('.content').show(200);
       })
 }
@@ -116,6 +118,7 @@ $('#yes').click(function() {
         cancelButtonColor: '#f6cd61',
         confirmButtonText: 'Gửi cho tớ <3'
     }).then((result) => {
+        console.log(result)
         if (result.value) {
             Swal.fire({
                 width: 900,
